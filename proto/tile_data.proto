@@ -1,0 +1,7 @@
+syntax = "proto3";
+package copicat.proto;
+option java_outer_classname = "DataProtos";
+
+message TileData {
+    bytes raw_data = 1;
+};
