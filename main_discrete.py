@@ -76,7 +76,7 @@ def main(data_args=None, optimizer_args=None, model_args=None, loss_args=None,
 
 _default_args = dict(
     data_args=dict(
-        batch_size=32,
+        batch_size=64,
         discrete=True,
         downsample_to=(32, 32)
     ),
@@ -87,8 +87,8 @@ _default_args = dict(
     ),
     model_args=dict(
         arch='dcgan_28_pub',
-        dim_z=100,
-        dim_h=128,
+        dim_z=64,
+        dim_h=64,
         leak=0.2,
         use_batch_norm=False
     ),
@@ -98,7 +98,7 @@ _default_args = dict(
     ),
     train_args=dict(
         epochs=100,
-        num_iter_gen=2,
+        num_iter_gen=1,
         num_iter_disc=1,
         summary_updates=None,
         archive_every=10
